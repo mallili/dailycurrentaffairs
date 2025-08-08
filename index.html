@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Daily Current Affairs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="DAILY MCQS.HTML.html">DAILY MCQS</a></li>
+                <li><a href="#">TESTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To text">
+            <a href="#"> <button class="btn">Search</button></a>
+        </div>
+
+    </div>
+    <div class="content">
+        <h1>JS <br><span>ACADAMY</span> <br>Daily Mcqs</h1>
+        <p class="par">APPSC,TSPSC,SSC(CGL,CHCL,MTS), IBPS, RAILYWAY, RRB BANKS</p>
+
+        <button class="cn"><a href="#">JOIN US</a></button>
+
+        <div class="form">
+            <h2>Login Here</h2>
+            <input type="email" name="email" placeholder="Enter Email Here">
+            <input type="password" name="" placeholder="Enter Password Here">
+            <button class="btnn"><a href="#">Login</a></button>
+
+            <p class="link">Don't have an account<br>
+                <a href="#">Sign up </a> here</a></p>
+            <p class="liw">Log in with</p>
+
+            <div class="icons">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+    document.querySelector('.btn').addEventListener('click', function (e) {
+        e.preventDefault();
+        const searchValue = document.querySelector('.srch').value;
+        if (searchValue.trim() !== "") {
+            alert("You searched for: " + searchValue);
+        } else {
+            alert("Please enter a search term.");
+        }
+    });
+
+    document.querySelector('.btnn').addEventListener('click', function (e) {
+        e.preventDefault();
+        const email = document.querySelector('input[type="email"]').value.trim();
+        const password = document.querySelector('input[type="password"]').value.trim();
+
+        if (!email || !password) {
+            alert("Please fill in both email and password fields.");
+        } else {
+            alert("Thank you! You entered:\nEmail: " + email + "\nPassword: " + password);
+        }
+    });
+</script>
+
+</body>
+</html>

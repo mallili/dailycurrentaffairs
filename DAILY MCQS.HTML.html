@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <title>సింధు నాగరికత MCQs</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Telugu', Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .question {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>సింధు నాగరికతపై 5 ప్రశ్నలు</h2>
+
+<form id="quizForm">
+    <div class="question">
+        <p>1. సింధు నాగరికత ఏ నది ఒడ్డున అభివృద్ధి చెందింది?</p>
+        <input type="radio" name="q1" value="a"> గంగా<br>
+        <input type="radio" name="q1" value="b"> యమునా<br>
+        <input type="radio" name="q1" value="c"> సింధు ✅<br>
+        <input type="radio" name="q1" value="d"> నర్మదా<br>
+    </div>
+
+    <div class="question">
+        <p>2. హరప్పా ఎక్కడ ఉంది?</p>
+        <input type="radio" name="q2" value="a"> గుజరాత్<br>
+        <input type="radio" name="q2" value="b"> పంజాబ్ (పాకిస్తాన్) ✅<br>
+        <input type="radio" name="q2" value="c"> హర్యానా<br>
+        <input type="radio" name="q2" value="d"> మధ్యప్రదేశ్<br>
+    </div>
+
+    <div class="question">
+        <p>3. మోహెంజోదారో లో ఏ శిల్పం ప్రసిద్ధి గాంచింది?</p>
+        <input type="radio" name="q3" value="a"> నాట్య శిల్పం ✅<br>
+        <input type="radio" name="q3" value="b"> పశుపతి శిల్పం<br>
+        <input type="radio" name="q3" value="c"> బుద్ధ విగ్రహం<br>
+        <input type="radio" name="q3" value="d"> రాజశిల్పం<br>
+    </div>
+
+    <div class="question">
+        <p>4. సింధు ప్రజలు ఎక్కువగా ఏ వస్త్రాలు వాడేవారు?</p>
+        <input type="radio" name="q4" value="a"> రేయాన్<br>
+        <input type="radio" name="q4" value="b"> పత్తి ✅<br>
+        <input type="radio" name="q4" value="c"> నైలాన్<br>
+        <input type="radio" name="q4" value="d"> పట్టు<br>
+    </div>
+
+    <div class="question">
+        <p>5. సింధు నాగరికత కాలం ఏమిటి?</p>
+        <input type="radio" name="q5" value="a"> 2500 BCE – 1500 BCE ✅<br>
+        <input type="radio" name="q5" value="b"> 1500 CE – 1000 CE<br>
+        <input type="radio" name="q5" value="c"> 1000 BCE – 500 BCE<br>
+        <input type="radio" name="q5" value="d"> 500 CE – 1000 CE<br>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">సబ్మిట్ చేయండి</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    function checkAnswers() {
+        const answers = {
+            q1: "c",
+            q2: "b",
+            q3: "a",
+            q4: "b",
+            q5: "a"
+        };
+
+        let score = 0;
+
+        for (let i = 1; i <= 5; i++) {
+            const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (userAnswer && userAnswer.value === answers[`q${i}`]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").innerText = `మీరు ${score} / 5 మార్కులు సాధించారు.`;
+    }
+</script>
+
+</body>
+</html>
